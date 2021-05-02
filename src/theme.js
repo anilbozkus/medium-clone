@@ -1,33 +1,26 @@
 import { createMuiTheme } from '@material-ui/core';
+import HelveticaNeueFont from "./assets/Helvetica-Neue.ttf";
+
+const HelveticaNeue = {
+    fontFamily: "HelveticaNeue",
+    fontStyle: "normal",
+    fontWeight: 500,
+    src: `
+      local('Helvetica-Neue'),
+      url(${HelveticaNeueFont}) format('truetype')
+    `
+  };
 
 const base = {
     palette: {
         primary: {
-            main: '#D12646',
+            main: 'rgba(25, 25, 25, 1)',
         },
         secondary: {
-            main: '#8898aa',
+            main: '#FFC017',
         },
         common: {
             white: '#ffffff',
-        },
-        shape: {
-            borderRadius: 4,
-        },
-        iconColor: {
-            main: '#172b4d',
-        },
-        borderColor: {
-            main: '#DDDDDD',
-        },
-
-        background: {
-            main: '#D12646',
-            secondary: '#2E2E2E',
-            containedPrimary: '#2E2E2E',
-            containedSecondary: '#D12646',
-            outlinedSecondary: '#ffffff',
-            outlinedPrimary: '#D12646',
         },
         text: {
             main: '#121212',
@@ -41,6 +34,15 @@ const base = {
             color: '#121212',
             fontWeight: 'bold',
         },
+        body2: {
+            fontSize: '14px',
+            fontWeight: '400',
+            fontStretch: 'normal',
+            fontStyle: 'normal',
+            lineHeight: '20px',
+            letterSpacing: '0.38px',
+            fontFamily:'HelveticaNeue'
+          },
     },
 };
 
@@ -48,11 +50,31 @@ var theme = createMuiTheme(base);
 
 theme = {
     ...theme,
-    
+
     overrides: {
+        MuiCssBaseline: {
+            "@global": {
+              "@font-face": [HelveticaNeue]
+            }
+        },
         MuiTypography: {
             color: '#121212',
         },
+        MuiButton: {
+            root: {
+              fontSize: '14px',
+              fontWeight: '400',
+              fontStretch: 'normal',
+              fontStyle: 'normal',
+              lineHeight: '20px',
+              letterSpacing: '0.45px',
+              textAlign: 'center',
+              fontFamily:'inherit',
+              textTransform: 'capitalize',
+              padding: '7px 16px 9px',
+            },
+      
+          },
     },
 };
 
