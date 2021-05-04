@@ -29,10 +29,20 @@ const base = {
     },
     typography: {
         h1: {
-            fontSize: '55px',
-            fontFamily: 'InterBold',
+            fontSize: '70px',
+            fontFamily:'gt-super, Georgia, Cambria, "Times New Roman", Times, serif;',
             color: '#121212',
-            fontWeight: 'bold',
+            fontWeight: 'normal',
+            height:'max-content'
+        },
+        body1: {
+            fontSize: '18px',
+            fontWeight: '400',
+            fontStretch: 'normal',
+            fontStyle: 'normal',
+            lineHeight: '24px',
+            letterSpacing: '0.38px',
+            fontFamily:'HelveticaNeue'
         },
         body2: {
             fontSize: '14px',
@@ -42,7 +52,7 @@ const base = {
             lineHeight: '20px',
             letterSpacing: '0.38px',
             fontFamily:'HelveticaNeue'
-          },
+        },
     },
 };
 

@@ -51,7 +51,7 @@ export default function Header(props){
     return (
         <Grid container justify="center" className={classes.headerContainer}>
             <Grid item className={classes.headerItem}>
-                <img src={Logo} alt="logo" style={{width:161}}/>
+                <img src={Logo} alt="logo" style={{width:180}}/>
                 <Grid item className={classes.headerRight}>
                     <Hidden xsDown>
                         <Typography variant="body2" className={classes.headerRightText}>
